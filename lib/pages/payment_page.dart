@@ -18,7 +18,6 @@ class _PaymentPageState extends State<PaymentPage> {
     TextEditingController expiryDate = TextEditingController();
     TextEditingController cardHolderName = TextEditingController();
     TextEditingController cvvCode = TextEditingController();
-    bool isCvvFocused = false;
 
     void userTappedPay() {
       if (formKey.currentState!.validate()) {
@@ -31,8 +30,6 @@ class _PaymentPageState extends State<PaymentPage> {
                 children: [
                   Text("Card Number: ${cardNumber.text}"),
                   Text("Expiry: ${expiryDate.text}"),
-                  Text("CVV: ${cvvCode.text}"),
-                  Text("Cardholder Name: ${cardHolderName.text}"),
                 ],
               ),
             ),
